@@ -1,0 +1,168 @@
+body {
+	margin:0;
+	font-family: 'Outfit', sans-serif;
+	background-color: hsl(217, 54%, 11%);
+	color: hsl(215, 51%, 70%);
+	font-size:18px;
+}
+
+main {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	min-height:100vh;
+}
+
+#mainContent {
+	background-color: hsl(216, 50%, 16%);
+	border-radius:10px;
+	width:25%;
+}
+
+ #mainImg {
+	position: relative;
+}
+
+#equiliImg {
+	margin-top: 1em;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: auto;
+	width: 85%;
+	border-radius: 15px;
+}
+
+.overlay {
+	opacity: 0;
+	position: absolute;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 85%;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: 100%;
+	background-color: hsl(178, 100%, 50%);
+	border-radius: 15px;
+	padding: 0;
+	transition: 0.5s ease;
+}
+
+#eyeImg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	transition: 0.5s ease;
+}
+
+#mainImg:hover .overlay {
+	opacity: 0.7;
+}
+
+h1 {
+	color: hsl(0, 0%, 100%);
+	transition:0.5s ease;
+}
+
+h1:hover {
+	color:hsl(178, 100%, 50%);
+}
+
+#info {
+	display:grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: auto auto;
+	grid-template-areas: 'first second';
+	margin-bottom: 1.5em;
+}
+
+#eth {
+	display: flex;
+	align-items: center;
+	grid-area:first;
+}
+
+#eth span {
+	margin-left:2%;
+}
+
+#clock {
+	width:100%;
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	grid-area:second;
+}
+
+#clock span {
+	margin-left:3%;
+}
+
+#mainInfo {	
+	width:85%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#footer {
+	border-top: 1px solid hsl(215, 32%, 27%);
+	padding-bottom: 1.5em;
+	display: flex;
+	align-items: center;
+}
+
+#footer p {
+	padding-left: 0.8em;
+}
+
+#creator {
+	color: white;
+	text-decoration: none;
+	transition:0.5s ease;
+}
+
+#creator:hover {
+	color:hsl(178, 100%, 50%);
+}
+
+#footer img {
+	width: 10%;
+	padding-top: 0.5em;
+}
+
+@media only screen and (max-width:1280px) {
+	#mainContent {
+		width:35%;
+	}
+}
+
+@media only screen and (max-width:900px) {
+	#mainContent {
+		width:50%;
+	}
+}
+
+@media only screen and (max-width:580px) {
+	#mainContent {
+		width:70%;
+	}
+}
+
+@media only screen and (max-width:400px) {
+	body {
+		font-size:12px;
+	}
+}
+
+@media only screen and (max-width:300px) {
+	#mainContent {
+		width:80%;
+	}
+	body {
+		font-size:12px;
+	}
+}
